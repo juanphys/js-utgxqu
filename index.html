@@ -124,12 +124,33 @@
 
         Nos podemos plantear qué dependencia habrá con respecto a algunas variables climáticas.
         <br /> <br /> 
-        
-    <img src="https://stackblitz.com/files/js-muspqn/github/juanphys/js-utgxqu/main/scatter.jpg" />
 
       <h3>¿Cuál es la relación entre el número de casos y algunas variables climáticas como la humedad, la temperatura o las precipitaciones?</h3>
 
+        Para intentar responder a esta cuestión podemos usar diagramas de puntos para representar los casos de dengue respecto a ciertas variables, lo que nos puede ayudar a intuir alguna dependencia lineal entre los casos de dengue y las variables. <br/><br/>
+
+        Python y la librería Matplotlib ofrece bastantes funcionalidades para graficar diagramas de dispersión. <br/><br/>
+
+       <img src="https://stackblitz.com/files/js-muspqn/github/juanphys/js-utgxqu/main/scatterplot.jpg" width="720" height="720" />
+
+        <br/><br/>
+
+        Como se ve, hemos representado para San Juan y para Iquitos los números de casos que se dan en relación a la temperatura máxima del aire en grados kelvin, las precipitaciones medidas en mm la temperatura del punto de rocío en K. En ninguno de los casos parece evidente una correlación lineal entre el número de casos y estas características. Sin duda hay una mayor complejidad en la transmisión del dengue.<br/><br/>
+
+        Lo que si vemos evidente es que el dengue en las ciudades de San Juan y de Iquitos se comporta de forma diferente. ¿Podemos asegurar esto con ayuda de alguna visualización?<br/><br/>
+
       <h3>Tenemos datos de dos ciudades, ¿se comportan los datos climáticos de forma similar o hay una clara diferencia?</h3>
+
+        Con los resultados que hemos obtenido hasta ahora se intuye un comportamiento diferente en ambas ciudades, sin embargo disponemos de muchas más características que no se han evaluado y no sabemos qué relaciones combinadas pueden estar influyendo en el número de casos de dengue. Podemos plantearnos si la identificación de grupos en los datos pero para una visualización adecuada debemos tener una representación en 2 o 3 dimensiones.<br/><br/>
+
+        Con ayuda de Python y haciendo uso del algoritmo PCA podemos reducir las dimensiones del dataset, e intentar explicar las caracteristicas con una combinación lineal reducida de ellas para representar gráficamente los datos. Procediendo de esta manera en el notebook de Google Collaboratory referenciado al inicio de este documento, hemos llegado a reducir las dimensiones de los datos climáticos a 3, obteniendose la siguiente diagrama de dispersión 3D con ayuda de la librería plotlib.express<br/><br/>
+
+        <img src="https://stackblitz.com/files/js-muspqn/github/juanphys/js-utgxqu/main/scatterplot.jpg" width="720" height="720" />
+ 
+         <br/><br/>
+ 
+
+        
 
 
   </p>

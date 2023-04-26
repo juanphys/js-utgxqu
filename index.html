@@ -1,0 +1,140 @@
+
+
+
+
+<head> 
+    <title>Html5</title> 
+    <meta charset="UTF-8">  
+    <style type="text/css"> 
+    .interlineado { line-height: 140%;} 
+    body 
+    { height: 842px; width: 595px; /* to centre page on screen*/ margin-left: auto; margin-right: auto; }
+  
+    </style> 
+</head>
+
+<div id="app">
+
+  <h1>Trabajo Práctico - 08MBID - Visualización de Datos</h1>
+  <h2>Máster de Big Data y Ciencia de Datos - VIU</h2>
+  
+  <span class="negrita">Nombre: </span> Juan Diego González de la Torre
+  <br>
+  <span class="negrita">Fecha: </span>24/04/2023
+  <br>
+
+  <span class="negrita">URL:</span>
+  <a href="https://js-utgxqu.stackblitz.io" target="_blank">
+    https://js-utgxqu.stackblitz.io
+  </a>
+  <br>
+
+  <span class="negrita">URL:</span>
+  <a href="https://colab.research.google.com/drive/1zrL9WXoCGITbSjwuis60b3uiI9duZQsO?usp=sharing" target="_blank">
+    Google Collaboratory
+  </a>
+  <br>
+
+  <span class="negrita">Fuente de datos original:</span>
+  <a href="https://www.drivendata.org/competitions/44/dengai-predicting-disease-spread/data/" target="_blank">
+    Data set
+  </a>
+  <br><br>
+
+  <h1>Introducción</h1>
+
+    <h2>Contexto</h2>
+      <p class="interlineado">
+        El dengue es una infección vírica que se transmite del mosquitos al ser humano. Es más frecuente en las regiones de climas tropicales y subtropicales. La mayoría de las personas que contraen dengue son asintomáticas. Sin embargo, cuando aparecen síntomas, suelen ser fiebre alta, dolor de cabeza y en otras partes del cuerpo, náuseas y erupciones en la piel. En la mayor parte de los casos, la persona se cura en una o dos semanas, pero en ocasiones se agrava, se requiere hospitalización e incluso, en los casos más graves, puede provocar la muerte. Dado que se transmite por mosquitos, su dinámica de transmisión está asociada a la climatología. El impacto del cambio climático en ciertas regiones está provocando un cambio en la distribución de su incidencia, dándose casos en aumento en áreas más al norte o más al sur de los trópicos. Establecer modelos predictivos basados en datos climáticos de la incidencia del dengue es esencial de cara a preparar los sistemas de salud públicos ante esta situación.
+        <br>
+      </p>
+
+      <h2>Objetivo</h2>
+        <p class="interlineado">
+          El objetivo de este trabajo es el de hacer un descubrimiento de conocimiento mediante visualización de datos. Esto se realizará sobre un dataset consistente en datos climáticos y de incidencia de casos de fiebre dengue a lo largo de diferentes semanas desde 1990 a 2010, las ciudades de San Juan y de Iquitos, en Puerto Rico y Perú, respectivamente. Este proceso de descubrimiento de conocimiento permitirá, mediante un análisis visual, responder a ciertas preguntas que permitan saber cómo evoluciona la efermedad y cómo se relaciona su incidencia con ciertas características climatológicas:
+          <br><br>
+          - ¿Cómo ha evolucionado el dengue en sendas ciudades a lo largo del tiempo?<br><br>
+          - ¿Cuál es la relación entre el número de casos y algunas variables climáticas como la humedad, la temperatura o las precipitacioes?<br><br>
+          - Tenemos datos de dos ciudades, ¿se comportan los datos climáticos de forma similar o hay una clara diferencia?<br>
+          <br>
+        </p>
+
+          <h2>Dataset</h2>
+          <p class="interlineado">
+            El conjunto de datos utilizado se puede encontrar en la URL de DrivenData referenciado más arriba y fue utilizado en la asignatura de 07MBID - Machine Learning como data set de trabajo para las actividades prácticas de aprendizaje supervisado y no supervisado.
+            <br><br>
+            Usaremos los datos de los ficheros dengue_featrures_training.csv y los datos dengue_labels_training.csv que integraremos convenientemente usando Python en Google Collaboratory
+            <br><br>
+          </p>
+
+  <h1>Metodología</h1>
+    <p class="interlineado">
+      La visualización de datos es el proceso de crear una representación visual de las tendencias, los patrones y relaciones presentes en los datos. Esto se logra mediante la creación de gráficos, diagramas, mapas y otros tipos de visualizaciones que permiten la representación visual de la forma más adecuada posible para los datos involucrados y el objetivo concreto de la visualización.
+      <br><br>
+      La visualización de datos en la era del big data cobra aún más importancia si cabe, ya que se convierte en la palanca que ayuda a la interpretabilidad de los mismos y la conversión de estos datos en información y la información en conocimiento. En el siglo 21 podemos contar historias a partir de los datos y buenas visualizaciones.
+      <br><br>
+      Existen en el mercado multitud de herramientas de visualización, algunas de caracter básico orientadas al público no especializado, como Excel o Google Sheets con sus funciones gráficas; otras muy específicas como SAP Analytics Cloud o Qlik Sense como soluciones cloud para inteligencia de negocios y analítica aumentada; existen también librerías y herramientas de visualización en lenguagues como Python, R o Javascript, y muchos otros servicios de visualización de datos bajo suscripción con más o menos funcionalidades y opciones de integración como DataWrapper; muy usado en periodismo, o los servicios de visualización y exploración de datos de AWS o Microsoft Azure.
+      <br><br>
+      En este trabajo trataremos de responder a las preguntaas planteadas más arriba usando dos herramientas de visualización diferentes: DataWrapper y Python. La elección se fundamenta en que, en función de la cuestión que deseamos resolver, es suficiente el uso de herramientas tipo autoservicio como DataWrapper para la visualización rápida y sencilla de los datos, mientras que otros preguntas requerirán mayor versatibilidad para la herramienta utilizada, tanto para el manejo como para la representación de los datos. El objetivo es obtener unas visualizaciones comprensibles por público no especializado pero acostumbrado a tratar con gráficas sencillas, por lo que se evitarán gráficas específicamente utilizadas en estadística como gráficos de cajas y bigotes o distribuciones en forma de violín, etc.
+      <br>
+    </p>
+
+    <br>
+  <h1>Resultados</h1>
+    <p class="interlineado">
+      En el dataset disponemos de más datos registrados para San Juan que para Iquitos, como solo tenemos estas dos categorías, podemos ver en un sencillo diagrama de tarta la distribución de los datos para estas ciudades:
+
+      <br /><br />
+      <iframe title="Datos registrados por ciudad" aria-label="Pie Chart" id="datawrapper-chart-rt3F3" src="https://datawrapper.dwcdn.net/rt3F3/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="388" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+      </script>
+      <br /><br />
+
+      Para contextualizar el caso, situémonos en el mapa y veamos la localización y casos acumulados de dengue en San Juan y en Iquitos. DataWrapper ofrece una forma rápida y sencilla de hacerlo:
+      <br /><br />
+
+      <iframe title="Casos acumulados de Dengue 1990-2010" aria-label="Map" id="datawrapper-chart-qN9VS" src="https://datawrapper.dwcdn.net/qN9VS/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="758" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+      </script>
+      <br /><br />
+
+      Como vemos, San Juan se encuentra en el Caribe, mientras que Iquitos se encuentra al norte del Amazonas. De esta visualización parece evidente que climas caribeños han estado más sometidos a la presión del dengue, con caso 8 veces más de casos acumulados entre 1990 y 2010. 
+      <br /><br />
+      Pero, ¿cómo ha evolucinado la situación a lo largo de esos años en ambas localizaciones?
+
+      <h3>¿Cómo ha evolucionado el dengue en sendas ciudades a lo largo del tiempo?</h3>
+
+        Para responder a esta pregunta necesitaremos graficar el número de casos frente al tiempo. Los gráficos de líneas son adecuados para visualizar series temporales y ver así posibles tendencias y/o estacionalidades. DataWrapper hace esto sencillo y atractivo a la vista.<br /> <br /> 
+      
+        San Juan ha presentado una mucho mayor incidencia de dengue, por lo que para tener una visualización más clara de la evolución en sendas ciudades, se ha tomado la decisión de representar las series separadamente.
+        <br /> <br /> 
+
+        <iframe title="Evolución Nº Casos Dengue: Iquitos 2002-2010" aria-label="Interactive line chart" id="datawrapper-chart-UmzCT" src="https://datawrapper.dwcdn.net/UmzCT/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+        </script>
+        <br /><br />
+
+        <iframe title="Evolución Nº Casos Dengue: San Juan 1990-2010" aria-label="Interactive line chart" id="datawrapper-chart-QkwSX" src="https://datawrapper.dwcdn.net/QkwSX/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+        </script><br /> <br /> 
+        
+        Es evidente que sería necesario un estudio más pormenorizado y sistemático de ambas series temporales y sus componentes, pero en un primer vistazo no se detecta una tendencia clara, sino más bien unos comportamientos cíclicos (más claros en San Juan), que posiblemente estén relacionados con los ciclos meteorológicos, y unos picos pronunciados que no parecen seguir pauta alguna.<br /> <br /> 
+        
+        Focalizando los datos en un intervalo más acotado de años, comprobamos que no se ve una estacionalidad. Hay años con picos en el primer trimestre y otros años con picos en el último trimestro del año. Se intuye un comportamiento bastante complejo en el contagio y difusión del dengue.
+        <br /> <br /> 
+          
+        <iframe title="Evolución Casos en Iquitos 2008-2010" aria-label="Interactive line chart" id="datawrapper-chart-3TKD5" src="https://datawrapper.dwcdn.net/3TKD5/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+        </script><br /> <br /> 
+
+        Nos podemos plantear qué dependencia habrá con respecto a algunas variables climáticas.
+        <br /> <br /> 
+        
+        <img src="scatter2D.png" alt="Scatterplot en 2D">
+
+      <h3>¿Cuál es la relación entre el número de casos y algunas variables climáticas como la humedad, la temperatura o las precipitaciones?</h3>
+
+      <h3>Tenemos datos de dos ciudades, ¿se comportan los datos climáticos de forma similar o hay una clara diferencia?</h3>
+
+
+  </p>
+
+  <br>
+  <h1>Conclusiones</h1>
+
+</div>
